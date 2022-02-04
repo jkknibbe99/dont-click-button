@@ -9,8 +9,6 @@ $(function() {
     let container_height = 400;
     let container_left = window.innerWidth/2 - container_width/2;
     let container_top = 200;
-    console.log(window.innerHeight);
-    console.log(container_left);
     dont_click_container.style.width = container_width.toString() + "px";
     dont_click_container.style.height = container_height.toString() + "px";
     dont_click_container.style.left = container_left.toString() + "px";
