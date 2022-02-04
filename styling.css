@@ -1,0 +1,55 @@
+
+/* -- styling.css -- */
+
+
+#dont-click-container {
+    position: absolute;
+}
+
+#dont-click-me-button {
+    position: absolute;
+    padding: 2px;
+}
+
+.page-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+.page-contents{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.grid-item, #dont-click-container {
+    border: solid 2px rgb(33, 37, 41);
+    border-radius: 20px;
+    color: rgb(33, 37, 41);
+}
+
+.grid-item-title {
+    padding-top: 10px;
+}
+
+.grid-item-title::before, .grid-item-title::after {
+    content: ' - ';
+}
+
+button {
+    background-color: rgb(33, 37, 41);
+    border: 1px solid rgb(33, 37, 41);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    transition: background-color .3s ease;
+}
+
+button:hover {
+    background-color: rgb(53, 57, 61);
+    border-color: rgb(53, 57, 61);
+    transition: all .3s ease;
+}
