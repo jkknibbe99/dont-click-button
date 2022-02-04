@@ -1,0 +1,43 @@
+
+<!-- fun.html | Fun page testing out some interesting html/css things -->
+<!-- !!DO NOT MOVE OR RENAME!! -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- jquery import -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- module loader function -->
+        <script> 
+            $(function(){
+                $("#css-imports").load("html_modules/css.html");
+                $("#navbar").load("html_modules/navbar.html");
+                var navbar = document.getElementsByClassName("navbar-nav")[0];
+                $.when(navbar).then(function() {
+                    $("#pages-script").load("js/pages.js");
+                });
+            });
+        </script>
+        <!-- sets the current page's filename -->
+        <script>
+            let url = window.location.pathname;
+            let current_filename = url.substring(url.lastIndexOf('/')+1);
+        </script>
+        <!-- pages.js script | sets up page links in navbar -->
+        <script id="pages-script"></script>
+        <!-- css import container -->
+        <div id="css-imports"></div>
+    </head> 
+
+    <body> 
+        <h1 class="page-title">Fun Stuff</h1>
+        <div id="navbar"></div>
+        <div class="page-contents">
+            <div id="dont-click-container">
+                <h4 class="grid-item-title">Don't Click Me Button</h4>
+                <script src="js/dont_click.js"></script>
+                <button id="dont-click-me-button">Don't Click Me</button>
+            </div>
+        </div>
+    </body> 
+</html>
