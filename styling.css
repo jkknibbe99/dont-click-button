@@ -11,12 +11,6 @@
     padding: 2px;
 }
 
-.page-title {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    text-align: center;
-}
-
 .page-contents{
     width: 60%;
     margin-left: 20%;
