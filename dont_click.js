@@ -2,6 +2,8 @@
 /*** dont_click.js ***/
 // this is the don't click button script. the '#dont-click-me-button' will move away from the mouse when you try to click it
 
+
+
 $(function() {
     // Setup dont-click-container
     let dont_click_container = document.getElementById("dont-click-container");
@@ -23,6 +25,14 @@ $(function() {
     dont_click_button.style.top = button_top.toString() + "px";
     dont_click_button.style.width = button_width.toString() + "px";
     dont_click_button.style.height = button_height.toString() + "px";
+    const buttonClicked = function () {
+        this.innerHTML = "You got me...";
+        dont_click_button.style.transition = "all 2s ease;";
+        dont_click_button.style.left = button_left.toString() + "px";
+        dont_click_button.style.top = button_top.toString() + "px";
+        setTimeout(() => { this.innerHTML = "Don't Click Me!"; }, 1500);
+    }
+    dont_click_button.onclick = buttonClicked;
     $("#dont-click-me-button").on({
         mouseover: function() {
             // calculate left value
